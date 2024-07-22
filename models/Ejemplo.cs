@@ -9,14 +9,16 @@ namespace POO_static.models
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-    }
 
-    public Ejemplo(){
-        Nombre="Valeria";
-        Apellido="cano";
-    }
+        public Ejemplo()
+        {
+            Nombre = "Valeria";
+            Apellido = "cano";
+        }
 
-    public void Saludar(){
-        Console.WriteLine($"Hola {Nombre} {Apellido}");
+        public void Saludar()
+        {
+            Console.WriteLine($"Hola {Nombre} {Apellido}");
+        }
     }
 }
