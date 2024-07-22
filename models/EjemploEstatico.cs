@@ -5,18 +5,20 @@ using System.Threading.Tasks;
 
 namespace POO_static.models
 {
-    public class EjemploEstatico
+    public static class EjemploEstatico //al declarar una clase estatica, todo lo de adentro sera esatico
+    //si la clase no es estatica, lo de adentro puede ser estatico o no 
     {
-         public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public static string Nombre { get; set; }
+        //poniendole el static me permite acceder a metodos y atributos sin necesidad de instanciar
+        public static string Apellido { get; set; }
 
-        public EjemploEstatico()
+        static EjemploEstatico() //no le puedo pasar parametros a un constructor estatico
         {
             Nombre = "Valeria";
             Apellido = "cano";
         }
 
-        public void Saludar()
+        public static void Saludar()
         {
             Console.WriteLine($"Hola {Nombre} {Apellido}");
         }
